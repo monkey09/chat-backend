@@ -25,9 +25,9 @@ app.use('/api/users', users)
 app.use('/api/chats', chats)
 app.use('/api/messages', messages)
 const __dirname1 = path.resolve()
-app.use(express.static(path.join(__dirname1, "/client/out")))
+app.use(express.static(path.join(__dirname1, "/out")))
 app.get("*", (req, res) =>
-  res.sendFile(path.resolve(__dirname1, "client", "out", "index.html"))
+  res.sendFile(path.resolve(__dirname1, "out", "index.html"))
 )
 // app errors
 app.use(notFound)
